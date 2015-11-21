@@ -33,7 +33,7 @@ def card_string_to_int(str):
 
     if len(clean_str) == 2 or len(clean_str) == 3:
         val_string = clean_str[:-1]
-        
+
         if val_string in FACES:
             val_string = FACES[val_string]
         elif val_string not in string.digits[1:] and val_string != '10':
@@ -72,7 +72,7 @@ def card_int_to_string(card):
     return s.upper()
 
 def decode_cards(cards):
-    
+
     # Find the card in front of the biggest gap
     big_gap_card = find_biggest_gap(cards)[0]
 
@@ -82,7 +82,7 @@ def decode_cards(cards):
     return (big_gap_card + step_size)%DECK_SIZE
 
 def encode_cards(cards):
-    
+
     # Find the card in front of the biggest gap
     (card_to_omit, permutation_number) = find_biggest_gap(cards)
 
@@ -192,7 +192,7 @@ def run_magic():
         raw_input('\nPress RETURN to see the hidden card.')
         print_card(one_card)
 
-    
+
 
 def run_magic_test():
     print 'You\'ve entered TEST MODE.'
